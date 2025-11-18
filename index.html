@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="./images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+    <title>Frontend Mentor | Time tracking dashboard</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+          rel="stylesheet">
+    <link href="variables.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+</head>
+<body>
+<main>
+    <section class="user-profile">
+        <header class="user-profile-header">
+            <figure class="user-profile-header-figure">
+                <img alt="User's avatar" src="images/image-jeremy.png">
+            </figure>
+            <div class="user-profile-header-wrapper">
+                <p>Report for</p>
+                <h1>Jeremy Robson</h1>
+            </div>
+        </header>
+        <nav class="time-filter">
+            <ul>
+                <li>
+                    <button class="filter-btn">Daily</button>
+                </li>
+                <li>
+                    <button class="filter-btn">Weekly</button>
+                </li>
+                <li>
+                    <button class="filter-btn">Monthly</button>
+                </li>
+            </ul>
+        </nav>
+    </section>
+    <section class="activities">
+        <article class="activity activity-work">
+            <figure>
+                <img alt="" src="images/icon-work.svg">
+            </figure>
+            <div class="activity-wrapper">
+                <header class="activity-header">
+                    <h2>Work</h2>
+                    <img alt="" height="5px" src="images/icon-ellipsis.svg" width="21px">
+                </header>
+                <div class="activity-time">
+                    <p class="activity-time-current">5hrs <!-- daily --></p>
+                    <p class="activity-time-previous">Previous - 7hrs <!-- daily --></p>
+                    <!--            32hrs &lt;!&ndash; weekly &ndash;&gt;-->
+                    <!--            Previous - 36hrs &lt;!&ndash; weekly &ndash;&gt;-->
+                    <!--            103hrs &lt;!&ndash; monthly &ndash;&gt;-->
+                    <!--            Previous - 128hrs &lt;!&ndash; monthly &ndash;&gt;-->
+                </div>
+            </div>
+        </article>
+        <article class="activity activity-play">
+            <figure>
+                <img src="images/icon-play.svg" alt="">
+            </figure>
+            <div class="activity-wrapper">
+                <header class="activity-header">
+                    <h2>Play</h2>
+                    <img alt="" height="5px" src="images/icon-ellipsis.svg" width="21px">
+                </header>
+                <div class="activity-time">
+                    <p class="activity-time-current">1hr <!-- daily --></p>
+                    <p class="activity-time-previous">Previous - 2hrs <!-- daily --></p>
+                    <!--            10hrs &lt;!&ndash; weekly &ndash;&gt;-->
+                    <!--            Previous - 8hrs &lt;!&ndash; weekly &ndash;&gt;-->
+                    <!--            23hrs &lt;!&ndash; monthly &ndash;&gt;-->
+                    <!--            Previous - 29hrs &lt;!&ndash; monthly &ndash;&gt;-->
+                </div>
+            </div>
+        </article>
+        <article class="activity activity-study">
+            <figure>
+                <img src="images/icon-study.svg" alt="">
+            </figure>
+            <div class="activity-wrapper">
+                <header class="activity-header">
+                    <h2>Study</h2>
+                    <img alt="" height="5px" src="images/icon-ellipsis.svg" width="21px">
+                </header>
+                <div class="activity-time">
+                    <p class="activity-time-current">0hrs <!-- daily --></p>
+                    <p class="activity-time-previous">Previous - 1hr <!-- daily --></p>
+                    <!--            4hrs &lt;!&ndash; weekly &ndash;&gt;-->
+                    <!--            Previous - 7hrs &lt;!&ndash; weekly &ndash;&gt;-->
+                    <!--            13hrs &lt;!&ndash; monthly &ndash;&gt;-->
+                    <!--            Previous - 19hrs &lt;!&ndash; monthly &ndash;&gt;-->
+                </div>
+            </div>
+        </article>
+        <article class="activity activity-exercise">
+            <figure>
+                <img src="images/icon-exercise.svg" alt="">
+            </figure>
+            <div class="activity-wrapper">
+                <header class="activity-header">
+                    <h2>Exercise</h2>
+                    <img alt="" height="5px" src="images/icon-ellipsis.svg" width="21px">
+                </header>
+                <div class="activity-time">
+                    <p class="activity-time-current">1hr <!-- daily --></p>
+                    <p class="activity-time-previous">Previous - 1hr <!-- daily --></p>
+                    <!--            4hrs &lt;!&ndash; weekly &ndash;&gt;-->
+                    <!--            Previous - 5hrs &lt;!&ndash; weekly &ndash;&gt;-->
+                    <!--            11hrs &lt;!&ndash; monthly &ndash;&gt;-->
+                    <!--            Previous - 18hrs &lt;!&ndash; monthly &ndash;&gt;-->
+                </div>
+            </div>
+        </article>
+        <article class="activity activity-social">
+            <figure>
+                <img src="images/icon-social.svg" alt="">
+            </figure>
+            <div class="activity-wrapper">
+                <header class="activity-header">
+                    <h2>Social</h2>
+                    <img alt="" height="5px" src="images/icon-ellipsis.svg" width="21px">
+                </header>
+                <div class="activity-time">
+                    <p class="activity-time-current">1hr <!-- daily --></p>
+                    <p class="activity-time-previous">Previous - 3hrs <!-- daily --></p>
+                    <!--            5hrs &lt;!&ndash; weekly &ndash;&gt;-->
+                    <!--            Previous - 10hrs &lt;!&ndash; weekly &ndash;&gt;-->
+                    <!--            21hrs &lt;!&ndash; monthly &ndash;&gt;-->
+                    <!--            Previous - 23hrs &lt;!&ndash; monthly &ndash;&gt;-->
+                </div>
+            </div>
+        </article>
+        <article class="activity activity-selfcare">
+            <figure>
+                <img src="images/icon-self-care.svg" alt="">
+            </figure>
+            <div class="activity-wrapper">
+                <header class="activity-header">
+                    <h2>Self Care</h2>
+                    <img alt="" height="5px" src="images/icon-ellipsis.svg" width="21px">
+                </header>
+                <div class="activity-time">
+                    <p class="activity-time-current">0hrs <!-- daily --></p>
+                    <p class="activity-time-previous">Previous - 1hr <!-- daily --></p>
+                    <!--            2hrs &lt;!&ndash; weekly &ndash;&gt;-->
+                    <!--            Previous - 2hrs &lt;!&ndash; weekly &ndash;&gt;-->
+                    <!--            7hrs &lt;!&ndash; monthly &ndash;&gt;-->
+                    <!--            Previous - 11hrs &lt;!&ndash; monthly &ndash;&gt;-->
+                </div>
+            </div>
+        </article>
+    </section>
+</main>
+</body>
+</html>

@@ -1,0 +1,309 @@
+body {
+    background-color: var(--navy950);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+main {
+    width: 327px;
+    margin: 81px 0;
+    display: grid;
+    grid-gap: var(--spacing-300);
+}
+
+.user-profile {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-300);
+    background-color: var(--navy900);
+    border-radius: 15px;
+}
+
+.user-profile-header {
+    padding: var(--spacing-400);
+    background-color: var(--purple600);
+    border-radius: 15px;
+    display: flex;
+    gap: var(--spacing-300);
+}
+
+.user-profile-header-figure {
+    width: 64px;
+    height: 64px;
+    margin: 0;
+    border: solid 3px var(--white);
+    border-radius: 50%;
+}
+
+.user-profile-header-figure img {
+    width: 100%;
+    height: 100%;
+}
+
+.user-profile-header-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-width: 172px;
+    gap: var(--spacing-100);
+    justify-content: center;
+}
+
+.user-profile-header-wrapper p {
+    margin: 0;
+    font: var(--font-weight-regular) var(--font-size-15px)/var(--line-height-18px) var(--font-family-Rubik);
+    color: var(--navy200);
+}
+
+.user-profile-header-wrapper h1 {
+    margin: 0;
+    font: var(--font-weight-light) var(--font-size-24px)/var(--line-height-28px) var(--font-family-Rubik);
+}
+
+.time-filter ul {
+    list-style: none;
+    margin: 0 0 var(--spacing-300) 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /*justify-content: space-around;*/
+    align-content: center;
+}
+
+.time-filter ul li {
+    display: flex;
+    justify-content: center;
+}
+
+.filter-btn {
+    font: var(--font-weight-regular) var(--font-size-18px)/var(--line-height-21px) var(--font-family-Rubik);
+    letter-spacing: var(--letter-spacing-0);
+    color: var(--purple500);
+    background-color: transparent;
+    border-style: none;
+}
+
+.filter-btn:hover {
+    color: var(--white);
+}
+
+.activities {
+    display: grid;
+    grid-gap: var(--spacing-300);
+}
+
+.activity {
+    box-sizing: border-box;
+    height: 160px;
+    border-radius: 15px;
+    position: relative;
+    padding-top: 38px;
+    overflow: hidden;
+}
+
+.activity figure {
+    margin: 0;
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    z-index: 1;
+}
+
+.activity-work {
+    background-color: var(--orange300);
+}
+
+.activity-play {
+    background-color: var(--blue300);
+}
+
+.activity-study {
+    background-color: var(--pink400);
+}
+
+.activity-exercise {
+    background-color: var(--green400);
+}
+
+.activity-social {
+    background-color: var(--purple700);
+}
+
+.activity-selfcare {
+    background-color: var(--yellow300);
+}
+
+.activity-wrapper {
+    height: 122px;
+    background-color: var(--navy900);
+    border-radius: 15px;
+    padding: var(--spacing-300);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-100);
+    position: relative;
+    z-index: 2;
+}
+
+.activity-wrapper:hover {
+    background-color: var(--navy800);
+}
+
+.activity-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.activity-header h2 {
+    font: var(--font-weight-medium) var(--font-size-18px)/var(--line-height-21px) var(--font-family-Rubik);
+    letter-spacing: var(--letter-spacing-0);
+    margin: 0;
+}
+
+.activity-time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.activity-time-current {
+    margin: 0;
+    font: var(--font-weight-light) var(--font-size-32px)/var(--line-height-38px) var(--font-family-Rubik);
+    letter-spacing: var(--letter-spacing-0);
+}
+
+.activity-time-previous {
+    margin: 0;
+    font: var(--font-weight-regular) var(--font-size-15px)/var(--line-height-18px) var(--font-family-Rubik);
+    color: var(--navy200);
+}
+
+@media (min-width: 768px) {
+    body {
+        height: 100vh;
+        align-items: center;
+    }
+
+    main {
+        width: 612px;
+        /*height: 677px;*/
+    }
+
+    .time-filter ul {
+        grid-template-columns: repeat(3, 109px);
+        justify-content: center;
+    }
+
+    .activities {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+        "work play study"
+        "exercise social selfcare";
+    }
+
+    .activity {
+        height: 213px;
+    }
+
+    .activity-work {
+        grid-area: work;
+    }
+
+    .activity-play {
+        grid-area: play;
+    }
+
+    .activity-study {
+        grid-area: study;
+    }
+
+    .activity-exercise {
+        grid-area: exercise;
+    }
+
+    .activity-social {
+        grid-area: social;
+    }
+
+    .activity-selfcare {
+        grid-area: selfcare;
+    }
+
+    .activity-wrapper {
+        height: 180px;
+        gap: var(--spacing-200);
+    }
+
+    .activity-time {
+        flex-direction: column;
+        gap: var(--spacing-100);
+    }
+
+    .activity-time-current {
+        display: flex;
+        width: 100%;
+        justify-content: flex-start;
+        font: var(--font-weight-light) var(--font-size-56px)/var(--line-height-66px) var(--font-family-Rubik);
+    }
+
+    .activity-time-previous {
+        display: flex;
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+}
+
+@media (min-width: 1440px) {
+    main {
+        width: 1116px;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "header content";
+        grid-gap: var(--spacing-400);
+    }
+
+    .user-profile {
+        grid-area: header;
+        width: 255px;
+    }
+
+    .activities {
+        grid-area: content;
+        grid-gap: var(--spacing-400);
+        width: 829px;
+    }
+
+    .activity {
+        height: 244px;
+    }
+
+    .user-profile-header {
+        flex-direction: column;
+        gap: var(--spacing-500);
+        box-sizing: border-box;
+        height: 354px;
+    }
+
+    .user-profile-header-figure {
+        width: 78px;
+        height: 78px;
+    }
+
+    .user-profile-header-wrapper h1 {
+        font: var(--font-weight-light) var(--font-size-40px)/var(--line-height-47px) var(--font-family-Rubik);
+    }
+
+    .time-filter {
+        padding-left: var(--spacing-400);
+    }
+
+    .time-filter ul {
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: auto;
+        justify-content: flex-start;
+        grid-gap: var(--spacing-300);
+    }
+}

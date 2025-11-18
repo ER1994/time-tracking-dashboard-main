@@ -1,0 +1,53 @@
+:root {
+    /*COLORS*/
+    --white: hsl(0, 100%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --navy950: hsl(226, 43%, 10%);
+    --navy900: hsl(235, 46%, 20%);
+    --navy800: hsl(235, 41%, 34%);
+    --navy200: hsl(236, 100%, 87%);
+    --orange300: hsl(15, 100%, 70%);
+    --purple700: hsl(264, 64%, 52%);
+    --purple600: hsl(246, 80%, 60%);
+    --purple500: hsl(235, 45%, 61%);
+    --blue300: hsl(195, 74%, 62%);
+    --pink400: hsl(348, 100%, 68%);
+    --green400: hsl(145, 58%, 55%);
+    --yellow300: hsl(43, 84%, 65%);
+    --grey200: hsl(0, 0%, 85%);
+
+    /*TYPOGRAPHY*/
+    /*Font size*/
+    --font-family-Rubik: "Rubik", sans-serif;
+
+    /*Font size*/
+    --font-size-56px: 56px;
+    --font-size-40px: 40px;
+    --font-size-32px: 32px;
+    --font-size-24px: 24px;
+    --font-size-18px: 18px;
+    --font-size-15px: 15px;
+
+    /*Font weight*/
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+
+    /*Line height*/
+    --line-height-66px: 66px;
+    --line-height-47px: 47px;
+    --line-height-38px: 38px;
+    --line-height-28px: 28px;
+    --line-height-21px: 21px;
+    --line-height-18px: 18px;
+
+    --letter-spacing-0: 0;
+
+    /*SPACING*/
+    --spacing-0: 0;
+    --spacing-100: 8px;
+    --spacing-200: 16px;
+    --spacing-300: 24px;
+    --spacing-400: 32px;
+    --spacing-500: 40px;
+}
