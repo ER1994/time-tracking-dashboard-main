@@ -83,7 +83,7 @@ main {
     border-style: none;
 }
 
-.filter-btn:hover {
+.active {
     color: var(--white);
 }
 

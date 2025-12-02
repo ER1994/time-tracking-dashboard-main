@@ -1,51 +1,55 @@
-let json;
-let timeFilterBtns = document.querySelectorAll('.filter-btn')
-let activities = document.querySelectorAll('.activity')
-let btnType = 'daily'
+let activityData;
+const timeFilterBtns = document.querySelectorAll('.filter-btn')
+const activities = document.querySelectorAll('.activity')
 
 function fetchData() {
     fetch('/data.json').then((response) => {
-        if (!response.ok) return console.log('Oops! Something went wrong.')
+        if (!response.ok) throw new Error('Error occurred during fetching data from external API')
 
         return  response.json()
     }).then((data) =>{
-        json = data
-        updateActivityCard(btnType)
-    })
+        activityData = data
+        updateActivityCard('daily')
+        const dailyBtn = document.querySelector('.filter-btn[data-option="daily"]');
+        dailyBtn.classList.add('active');
+    }).catch((error) => console.error(error))
 }
 
-function updateActivityValue (hours, value, activityCard, previous) {
-    if (value > 1) {hours = 'hrs'}
+function updateActivityValue (value, activityCard, previous) {
+    const suffix = value === 1 ? 'hr' : 'hrs'
     if (previous) {
-        activityCard.innerText = 'Previous - ' + value + hours
+        activityCard.innerText = 'Previous - ' + value + suffix
     } else {
-        activityCard.innerText = value + hours
+        activityCard.innerText = value + suffix
     }
 }
 
 function updateActivityCard (type) {
     activities.forEach(activity => {
-        let activityHeader = activity.querySelector('.activity-header').querySelector('h2').innerText
+        let activityHeader = activity.dataset.title
         let currentTime = activity.querySelector('.activity-time-current')
         let previousTime = activity.querySelector('.activity-time-previous')
-        let importedData = json.find(item => item.title === activityHeader)
-        let hours = 'hr'
+        let importedData = activityData.find(item => item.title === activityHeader)
         let previous = false
         if (importedData) {
             let currentValue = importedData.timeframes[type].current
-            updateActivityValue(hours, currentValue, currentTime,previous)
+            updateActivityValue(currentValue, currentTime,previous)
 
             let previousValue = importedData.timeframes[type].previous
             previous = true
-            updateActivityValue(hours, previousValue, previousTime,previous)
+            updateActivityValue(previousValue, previousTime,previous)
         }
 
     })
 }
 
 function handleTimeFilter (e) {
-    btnType = e.target.dataset.option
-    updateActivityCard(btnType)
+    timeFilterBtns.forEach(btn => {
+        btn.classList.remove('active')
+    })
+    e.target.classList.add('active')
+    const currentType = e.target.dataset.option
+    updateActivityCard(currentType)
 }
 
 fetchData()
