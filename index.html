@@ -12,6 +12,7 @@
           rel="stylesheet">
     <link href="variables.css" rel="stylesheet">
     <link href="main.css" rel="stylesheet">
+    <script src="dashboard.js" defer></script>
 </head>
 <body>
 <main>
@@ -28,19 +29,19 @@
         <nav class="time-filter">
             <ul>
                 <li>
-                    <button class="filter-btn">Daily</button>
+                    <button class="filter-btn active" data-option="daily">Daily</button>
                 </li>
                 <li>
-                    <button class="filter-btn">Weekly</button>
+                    <button class="filter-btn" data-option="weekly">Weekly</button>
                 </li>
                 <li>
-                    <button class="filter-btn">Monthly</button>
+                    <button class="filter-btn" data-option="monthly">Monthly</button>
                 </li>
             </ul>
         </nav>
     </section>
     <section class="activities">
-        <article class="activity activity-work">
+        <article class="activity activity-work" data-title="Work">
             <figure>
                 <img alt="" src="images/icon-work.svg">
             </figure>
@@ -50,16 +51,12 @@
                     <img alt="" height="5px" src="images/icon-ellipsis.svg" width="21px">
                 </header>
                 <div class="activity-time">
-                    <p class="activity-time-current">5hrs <!-- daily --></p>
-                    <p class="activity-time-previous">Previous - 7hrs <!-- daily --></p>
-                    <!--            32hrs &lt;!&ndash; weekly &ndash;&gt;-->
-                    <!--            Previous - 36hrs &lt;!&ndash; weekly &ndash;&gt;-->
-                    <!--            103hrs &lt;!&ndash; monthly &ndash;&gt;-->
-                    <!--            Previous - 128hrs &lt;!&ndash; monthly &ndash;&gt;-->
+                    <p class="activity-time-current"></p>
+                    <p class="activity-time-previous"></p>
                 </div>
             </div>
         </article>
-        <article class="activity activity-play">
+        <article class="activity activity-play" data-title="Play">
             <figure>
                 <img src="images/icon-play.svg" alt="">
             </figure>
@@ -69,16 +66,12 @@
                     <img alt="" height="5px" src="images/icon-ellipsis.svg" width="21px">
                 </header>
                 <div class="activity-time">
-                    <p class="activity-time-current">1hr <!-- daily --></p>
-                    <p class="activity-time-previous">Previous - 2hrs <!-- daily --></p>
-                    <!--            10hrs &lt;!&ndash; weekly &ndash;&gt;-->
-                    <!--            Previous - 8hrs &lt;!&ndash; weekly &ndash;&gt;-->
-                    <!--            23hrs &lt;!&ndash; monthly &ndash;&gt;-->
-                    <!--            Previous - 29hrs &lt;!&ndash; monthly &ndash;&gt;-->
+                    <p class="activity-time-current">></p>
+                    <p class="activity-time-previous"></p>
                 </div>
             </div>
         </article>
-        <article class="activity activity-study">
+        <article class="activity activity-study" data-title="Study">
             <figure>
                 <img src="images/icon-study.svg" alt="">
             </figure>
@@ -88,16 +81,12 @@
                     <img alt="" height="5px" src="images/icon-ellipsis.svg" width="21px">
                 </header>
                 <div class="activity-time">
-                    <p class="activity-time-current">0hrs <!-- daily --></p>
-                    <p class="activity-time-previous">Previous - 1hr <!-- daily --></p>
-                    <!--            4hrs &lt;!&ndash; weekly &ndash;&gt;-->
-                    <!--            Previous - 7hrs &lt;!&ndash; weekly &ndash;&gt;-->
-                    <!--            13hrs &lt;!&ndash; monthly &ndash;&gt;-->
-                    <!--            Previous - 19hrs &lt;!&ndash; monthly &ndash;&gt;-->
+                    <p class="activity-time-current"></p>
+                    <p class="activity-time-previous"></p>
                 </div>
             </div>
         </article>
-        <article class="activity activity-exercise">
+        <article class="activity activity-exercise" data-title="Exercise">
             <figure>
                 <img src="images/icon-exercise.svg" alt="">
             </figure>
@@ -107,16 +96,12 @@
                     <img alt="" height="5px" src="images/icon-ellipsis.svg" width="21px">
                 </header>
                 <div class="activity-time">
-                    <p class="activity-time-current">1hr <!-- daily --></p>
-                    <p class="activity-time-previous">Previous - 1hr <!-- daily --></p>
-                    <!--            4hrs &lt;!&ndash; weekly &ndash;&gt;-->
-                    <!--            Previous - 5hrs &lt;!&ndash; weekly &ndash;&gt;-->
-                    <!--            11hrs &lt;!&ndash; monthly &ndash;&gt;-->
-                    <!--            Previous - 18hrs &lt;!&ndash; monthly &ndash;&gt;-->
+                    <p class="activity-time-current"></p>
+                    <p class="activity-time-previous"></p>
                 </div>
             </div>
         </article>
-        <article class="activity activity-social">
+        <article class="activity activity-social" data-title="Social">
             <figure>
                 <img src="images/icon-social.svg" alt="">
             </figure>
@@ -126,16 +111,12 @@
                     <img alt="" height="5px" src="images/icon-ellipsis.svg" width="21px">
                 </header>
                 <div class="activity-time">
-                    <p class="activity-time-current">1hr <!-- daily --></p>
-                    <p class="activity-time-previous">Previous - 3hrs <!-- daily --></p>
-                    <!--            5hrs &lt;!&ndash; weekly &ndash;&gt;-->
-                    <!--            Previous - 10hrs &lt;!&ndash; weekly &ndash;&gt;-->
-                    <!--            21hrs &lt;!&ndash; monthly &ndash;&gt;-->
-                    <!--            Previous - 23hrs &lt;!&ndash; monthly &ndash;&gt;-->
+                    <p class="activity-time-current"></p>
+                    <p class="activity-time-previous"></p>
                 </div>
             </div>
         </article>
-        <article class="activity activity-selfcare">
+        <article class="activity activity-selfcare" data-title="Self Care">
             <figure>
                 <img src="images/icon-self-care.svg" alt="">
             </figure>
@@ -145,12 +126,8 @@
                     <img alt="" height="5px" src="images/icon-ellipsis.svg" width="21px">
                 </header>
                 <div class="activity-time">
-                    <p class="activity-time-current">0hrs <!-- daily --></p>
-                    <p class="activity-time-previous">Previous - 1hr <!-- daily --></p>
-                    <!--            2hrs &lt;!&ndash; weekly &ndash;&gt;-->
-                    <!--            Previous - 2hrs &lt;!&ndash; weekly &ndash;&gt;-->
-                    <!--            7hrs &lt;!&ndash; monthly &ndash;&gt;-->
-                    <!--            Previous - 11hrs &lt;!&ndash; monthly &ndash;&gt;-->
+                    <p class="activity-time-current"></p>
+                    <p class="activity-time-previous"></p>
                 </div>
             </div>
         </article>
