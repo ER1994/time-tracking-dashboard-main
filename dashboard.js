@@ -10,8 +10,6 @@ function fetchData() {
     }).then((data) =>{
         activityData = data
         updateActivityCard('daily')
-        const dailyBtn = document.querySelector('.filter-btn[data-option="daily"]');
-        dailyBtn.classList.add('active');
     }).catch((error) => console.error(error))
 }
 
