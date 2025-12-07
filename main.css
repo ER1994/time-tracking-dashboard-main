@@ -67,7 +67,6 @@ main {
     padding: 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /*justify-content: space-around;*/
     align-content: center;
 }
 
@@ -84,7 +83,7 @@ main {
     border-style: none;
 }
 
-.filter-btn:hover {
+.active {
     color: var(--white);
 }
 
@@ -98,8 +97,10 @@ main {
     height: 160px;
     border-radius: 15px;
     position: relative;
-    padding-top: 38px;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .activity figure {
@@ -135,8 +136,9 @@ main {
 }
 
 .activity-wrapper {
-    height: 122px;
     background-color: var(--navy900);
+    flex: 1;
+    margin-top: 38px;
     border-radius: 15px;
     padding: var(--spacing-300);
     display: flex;
@@ -182,13 +184,12 @@ main {
 
 @media (min-width: 768px) {
     body {
-        height: 100vh;
+        min-height: 100vh;
         align-items: center;
     }
 
     main {
         width: 612px;
-        /*height: 677px;*/
     }
 
     .time-filter ul {
@@ -232,7 +233,7 @@ main {
     }
 
     .activity-wrapper {
-        height: 180px;
+        /*height: 180px;*/
         gap: var(--spacing-200);
     }
 
@@ -278,6 +279,9 @@ main {
 
     .activity {
         height: 244px;
+    }
+    .activity-wrapper {
+        gap: var(--spacing-300);
     }
 
     .user-profile-header {
